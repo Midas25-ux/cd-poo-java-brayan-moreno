@@ -149,7 +149,7 @@ Es más fácil agregar nuevos servicios o nuevos empleados.
 
 La lógica del negocio (mostrar datos, registrar reparaciones, etc.) está encapsulada dentro de los objetos.
 
-6. Diagrama de clase
+6. Diagrama de clase 
 
 +------------------------------------+
 |             Mecanico               |

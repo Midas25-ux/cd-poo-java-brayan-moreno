@@ -62,7 +62,7 @@
 
 #### Persona encargada de diagnosticar, reparar y revisar vehículos.
 
-### ¿Qué características tiene?
+### ¿Qué características tiene? 
 
 #### 🎯 Nombre
 
@@ -90,7 +90,7 @@
 
 #### Una actividad que el taller ofrece a los clientes para sus vehículos.
 
-### ¿Qué características tiene?
+### ¿Qué características tiene? 
 
 #### 🎯 Nombre Servicio
 
@@ -102,7 +102,7 @@
 
 #### 🎯 Nivel Complejidad
 
-### ¿Qué puede hacer?
+### ¿Qué puede hacer? 
 
 #### 📊 cambiar Precio()
 
