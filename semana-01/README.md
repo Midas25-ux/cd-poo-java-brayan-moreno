@@ -1,30 +1,36 @@
-
-### 5. README por Semana
-
-**Nombre:** `README.md` (dentro de cada carpeta `semana-XX/`)
-
-**Contenido mínimo:**
-
-```markdown
-# Semana [XX] - [Tema de la Semana]
+# Semana 01 - Sistema de Gestión de Taller Mecánico
 
 ## 📝 Descripción
 
-[Breve descripción de lo implementado esta semana]
+Esta semana se implementó un sistema básico de gestión para un **taller mecánico** utilizando Programación Orientada a Objetos en Java.  
+El programa incluye clases para representar vehículos, mecánicos y servicios del taller.  
+También se creó un programa principal (`Main`) que demuestra la interacción entre los objetos del dominio.
 
 ## 🎯 Objetivos Cumplidos
 
-- [x] Implementar clase principal del dominio
-- [x] Implementar clase secundaria relacionada
-- [x] Crear programa de demostración
+- [x] Implementar clase principal del dominio (`Servicio`)
+- [x] Implementar clase secundaria relacionada (`Mecanico`)
+- [x] Implementar clase adicional (`Autos`)
+- [x] Crear programa de demostración con múltiples objetos
+- [x] Mostrar estados, atributos y comportamiento de los objetos
 - [x] Documentar análisis del dominio
 
 ## 📂 Archivos Entregados
 
-- `src/[ClasePrincipal].java` - [Descripción breve]
-- `src/[ClaseSecundaria].java` - [Descripción breve]
-- `src/Main.java` - Programa de demostración
-- `docs/ANALISIS.md` - Análisis del dominio
+- `src/Autos.java`  
+  Clase que representa un vehículo del taller con atributos como placa, marca, modelo y año.
+
+- `src/Mecanico.java`  
+  Clase que modela la información de un mecánico, incluyendo su identificación, especialidad y cantidad de reparaciones realizadas.
+
+- `src/Servicio.java`  
+  Clase que describe un servicio del taller: tipo, precio, tiempo estimado y estado (activo/inactivo).
+
+- `src/Main.java`  
+  Programa que crea varios  servicios y mecánicos, mostrando su información en consola.
+
+- `docs/ANALISIS.md`  
+  Documento con el análisis del dominio, entidades y relación entre los objetos.
 
 ## 🚀 Instrucciones de Ejecución
 

@@ -29,7 +29,7 @@ public class Main {
     mec1.registrarReparacion();
     mec2.registrarReparacion();
 
-    System.out.println("\n--- MECÁNICOS (Después de registrar reparaciones) ---");
+    System.out.println("\n--- MECÁNICOS---");
     mec1.mostrarDatos();
     System.out.println();
     mec2.mostrarDatos();
