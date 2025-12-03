@@ -1,3 +1,4 @@
+
 public class Main {
 
   public static void main(String[] args) {
@@ -5,18 +6,16 @@ public class Main {
     System.out.println("=== SISTEMA DE GESTIÓN DE TALLER MECÁNICO ===\n");
 
     // Crear mecánicos
-    Mecanico mec1 = new Mecanico("M001", "Juan Pérez",
-        "juanpere4576@gmail.com", 5956787, "Cra 10 #20-30", "electromecanica");
+    Mecanicos mec1 = new Mecanicos ( "Juan Perez", "M001","juanpe2354@gmail.com" , 5956787, "Cra 10 #20-30", "electromecanica");
 
-    Mecanico mec2 = new Mecanico("M002", "Luis Gómez",
+    Mecanicos mec2 = new Mecanicos("M002", "Luis Gómez",
         "luis21432@outlook.com", 6778508, "Av 5 #15-45", "automotriz");
 
     // Crear servicios
     Servicio s1 = new Servicio("Mecánico", "Alineación", 45000,
         "Alineación completa del vehículo", 1, true);
 
-    Servicio s2 = new Servicio("Eléctrico", "Cambio de batería", 120000,
-        "Reemplazo de batería y revisión eléctrica", 1, false);
+    Servicio s2 = new Servicio("Eléctrico", "Cambio de batería", 120000,"Cambio de aceite y valvula", 1, true);
 
     // Mostrar mecánicos
     System.out.println("--- MECÁNICOS ---");

@@ -4,7 +4,7 @@
 
 Esta semana se implementó un sistema básico de gestión para un **taller mecánico** utilizando Programación Orientada a Objetos en Java.  
 El programa incluye clases para representar vehículos, mecánicos y servicios del taller.  
-También se creó un programa principal (`Main`) que demuestra la interacción entre los objetos del dominio.
+También se creó un programa principal (`Main1`) que demuestra la interacción entre los objetos del dominio.
 
 ## 🎯 Objetivos Cumplidos
 
@@ -26,7 +26,7 @@ También se creó un programa principal (`Main`) que demuestra la interacción e
 - `src/Servicio.java`  
   Clase que describe un servicio del taller: tipo, precio, tiempo estimado y estado (activo/inactivo).
 
-- `src/Main.java`  
+- `src/Main1.java`  
   Programa que crea varios vehículos, servicios y mecánicos, mostrando su información en consola.
 
 - `docs/ANALISIS.md`  
@@ -37,5 +37,5 @@ También se creó un programa principal (`Main`) que demuestra la interacción e
 ```bash
 cd src
 javac *.java
-java Main
+java Main1
 

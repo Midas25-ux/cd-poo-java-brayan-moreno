@@ -20,4 +20,4 @@
 ```bash
 cd semana-01/src
 javac *.java
-java Main
+java Main1

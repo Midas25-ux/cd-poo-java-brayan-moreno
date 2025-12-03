@@ -1,6 +1,6 @@
 public class Mecanicos {
   // Atributos (4 mínimo)
-  private String idMecanico;
+  private String IdMecanico;
   private String nombre;
   private String correo;
   private int telefono;
@@ -9,8 +9,8 @@ public class Mecanicos {
   private int reparacionesRealizadas;
 
   // Constructor
-  public Mecanicos(String idMecanico, String nombre, String correo, int telefono, String direccion, String especialidad) {
-    this.idMecanico = idMecanico;
+  public Mecanicos(String IdMecanico, String nombre, String correo, int telefono, String direccion, String especialidad) {
+    this.IdMecanico = IdMecanico;
     this.nombre = nombre;
     this.correo = correo;
     this.telefono = telefono;
@@ -24,7 +24,7 @@ public class Mecanicos {
   // Mostrar datos del mecánico
   public void mostrarDatos() {
     System.out.println("Mecánico: " + nombre);
-    System.out.println("ID: " + idMecanico);
+    System.out.println("ID: " + IdMecanico);
     System.out.println("Correo: " + correo);
     System.out.println("Telefono: " + telefono);
     System.out.println("Direccion: " + direccion);
