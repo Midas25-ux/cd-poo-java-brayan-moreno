@@ -1,33 +1,30 @@
 public class Main1 {
   public static void main(String[] args) {
+    System.out.println("=== SISTEMA DE GESTIÓN DE TALLER MECÁNICO ===\n");
 
-    System.out.println("=== SISTEMA DEL TALLER MECÁNICO - SEMANA 02 ===\n");
+    // Crear clientes
+    Cliente c1 = new Cliente("Carlos López", "carlos@gmail.com", "312456789");
+    Cliente c2 = new Cliente("Ana Torres", "ana@hotmail.com", "320987654");
 
-    // Mecánicos existentes (ya creados en semana 01)
-    Mecanicos m1 = new Mecanicos("M001", "Juan Pérez", "juanpere4576@gmail.com",
-        5956787, "Cra 10 #20-30", "Electromecánica");
+    // Crear mecánicos
+    Mecanicos mec1 = new Mecanicos("Juan Perez", "M001", "juanpe2354@gmail.com", 5956787, "Cra 10 #20-30", "electromecanica");
+    Mecanicos mec2 = new Mecanicos("Luis Gómez", "M002", "luis21432@outlook.com", 6778508, "Av 5 #15-45", "automotriz");
 
-    Mecanicos m2 = new Mecanicos("M002", "Luis Gómez", "luis21432@outlook.com",
-        6778508, "Av 5 #15-45", "Automotriz");
+    // Crear servicios
+    Servicio s1 = new Servicio("Mecánico", "Alineación", 45000, "Alineación completa del vehículo", 1, true);
+    Servicio s2 = new Servicio("Eléctrico", "Cambio de batería", 120000, "Cambio de batería y revisión", 1, true);
 
-    // Crear vehículos
-    Vehiculo v1 = new Vehiculo("ABC123", "Chevrolet", "Spark GT", 2020);
-    Vehiculo v2 = new Vehiculo("JKL987", "Toyota", "Corolla", 2022);
+    // Crear reparaciones (relaciones)
+    Reparacion r1 = new Reparacion(c1, mec1, s1, "2025-12-07");
+    Reparacion r2 = new Reparacion(c2, mec2, s2, "2025-12-08");
 
-    // Crear reparaciones
-    Servicio r1 = new Servicio(m1, v1, "Cambio de aceite", 85000);
-    Servicio r2 = new Servicio(m2, v2, "Alineación y balanceo", 120000);
-    Reparacion r3 = new Reparacion(m1, v2, "Revisión de frenos", 95000);
-
-    // Clase gestora
-    TallerMecanico taller = new TallerMecanico();
+    // Crear taller y usar ArrayList
+    TallerMecanico taller = new TallerMecanico("Taller Los Expertos");
     taller.agregarReparacion(r1);
     taller.agregarReparacion(r2);
-    taller.agregarReparacion(r3);
 
     // Mostrar resultados
     taller.mostrarReparaciones();
-    System.out.println("\nTotal reparaciones: " + taller.totalReparaciones());
-    System.out.println("Total ingresos: $" + taller.totalIngresos());
+    System.out.println("Total reparaciones: " + taller.contarReparaciones());
   }
 }
