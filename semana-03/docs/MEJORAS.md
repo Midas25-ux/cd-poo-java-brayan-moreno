@@ -3,38 +3,26 @@
 ## Encapsulación Aplicada
 
 ### Clase: Cliente
-- Atributos encapsulados: nombre, telefono, correo
-- Validaciones agregadas:
-    - Nombre no vacío
-    - Teléfono válido (7-15 dígitos)
-    - Correo contiene "@"
+- Atributos encapsulados: nombre, email, telefono, direccion
+- Validaciones agregadas: nombre no vacío, email con '@', teléfono mínimo 7 dígitos
 
-### Clase: Vehiculo
-- Atributos encapsulados: marca, modelo, anio, propietario, servicio
-- Validaciones agregadas:
-    - Marca y modelo no vacíos
-    - Año entre 1900 y 2050
-    - Propietario no nulo
-    - Servicio no vacío
-
-### Clase: TallerMecanico
-- Atributos encapsulados: nombre, vehiculos
-- Validaciones agregadas:
-    - Nombre del taller no vacío
+### Clase: Servicio
+- Atributos encapsulados: tipo, nombre, precio, descripcion, duracionHoras, disponible
+- Validaciones agregadas: precio positivo, duración mayor a 0, nombre y tipo no vacíos
 
 ## Constructores Sobrecargados
 
 ### Clase: Cliente
-- Constructor completo: nombre, teléfono, correo
-- Constructor básico: nombre, correo (teléfono por defecto)
-- Constructor mínimo: solo nombre (correo generado automáticamente)
+- Constructor completo: recibe todos los datos
+- Constructor básico: nombre y email, asigna valores por defecto
+- Constructor mínimo: solo nombre, genera email automático
 
-### Clase: Vehiculo
-- Constructor completo: marca, modelo, año, propietario, servicio
-- Constructor básico: marca, modelo, año, propietario (servicio por defecto)
-- Constructor mínimo: marca y modelo solo (propietario y servicio por defecto)
+### Clase: Servicio
+- Constructor completo: recibe todos los datos
+- Constructor básico: nombre y precio, asigna valores por defecto
+- Constructor mínimo: solo nombre, asigna precio y descripción básica
 
 ## Beneficios Logrados
-- Control total sobre los datos internos (encapsulación)
-- Prevención de errores con validaciones
+- Código más seguro y robusto gracias a validaciones
 - Flexibilidad al crear objetos con distintos niveles de información
+- Encapsulación que protege los atributos y evita inconsistencias
