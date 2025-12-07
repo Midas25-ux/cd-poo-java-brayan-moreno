@@ -1,50 +1,51 @@
 public class Servicio {
-  private String tipoServicio;
-  private String nombreServicio;
-  private double precioServicio;
-  private String descripcionServicio;
-  private int tiempoServicio;
-  private boolean activo;
+  private String tipo;
+  private String nombre;
+  private double precio;
+  private String descripcion;
+  private int duracionHoras;
+  private boolean disponible;
 
-  // Constructor
-  public Servicio(String tipoServicio, String nombreServicio, double precioServicio, String descripcionServicio, int tiempoServicio, boolean activo) {
-    this.tipoServicio = tipoServicio;
-    this.nombreServicio = nombreServicio;
-    this.precioServicio = precioServicio;
-    this.descripcionServicio = descripcionServicio;
-    this.tiempoServicio = tiempoServicio;
-    this.activo = activo;
+  public Servicio(String tipo, String nombre, double precio, String descripcion, int duracionHoras, boolean disponible) {
+    this.tipo = tipo;
+    this.nombre = nombre;
+    this.precio = precio;
+    this.descripcion = descripcion;
+    this.duracionHoras = duracionHoras;
+    this.disponible = disponible;
+  }
+
+  // Getters necesarios
+  public String getNombre() {
+    return nombre;
+  }
+
+  public double getPrecio() {
+    return precio;
+  }
+
+  public String getTipo() {
+    return tipo;
+  }
+
+  public String getDescripcion() {
+    return descripcion;
+  }
+
+  public int getDuracionHoras() {
+    return duracionHoras;
+  }
+
+  public boolean isDisponible() {
+    return disponible;
   }
 
 
-  // metodo para imprimir informacion
   public void mostrarInfo() {
-    System.out.println("Servicio creado:");
-    System.out.println("Tipo: " + tipoServicio);
-    System.out.println("Nombre: " + nombreServicio);
-    System.out.println("Precio: $" + precioServicio + " pesos");
-    System.out.println("Descripción: " + descripcionServicio);
-    System.out.println("Tiempo: " + tiempoServicio + " hora");
-    System.out.println("Estado: " + (activo ? "Activo" : "Inactivo"));
-  }
-
-  // Getters y setters
-  public String getTipoServicio() { return tipoServicio; }
-  public void setTipoServicio(String tipoServicio) { this.tipoServicio = tipoServicio; }
-
-  public String getNombreServicio() { return nombreServicio; }
-  public void setNombreServicio(String nombreServicio) { this.nombreServicio = nombreServicio; }
-
-  public double getPrecioServicio() { return precioServicio; }
-  public void setPrecioServicio(double precioServicio) { this.precioServicio = precioServicio; }
-
-  public String getDescripcionServicio() { return descripcionServicio; }
-  public void setDescripcionServicio(String descripcionServicio) { this.descripcionServicio = descripcionServicio; }
-
-  public int getTiempoServicio() { return tiempoServicio; }
-  public void setTiempoServicio(int tiempoServicio) { this.tiempoServicio = tiempoServicio; }
-
-  public boolean isEstadoServicio() { return activo; }
-  public void setActivo(boolean activo) { this.activo = activo;
+    System.out.println("Servicio: " + nombre + " (" + tipo + ")");
+    System.out.println("Precio: $" + precio);
+    System.out.println("Descripción: " + descripcion);
+    System.out.println("Duración: " + duracionHoras + " hora(s)");
+    System.out.println("Disponible: " + (disponible ? "Sí" : "No"));
   }
 }

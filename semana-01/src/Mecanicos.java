@@ -1,50 +1,65 @@
 public class Mecanicos {
-  // Atributos (4 mínimo)
-  private String IdMecanico;
   private String nombre;
+  private String codigo;
   private String correo;
   private int telefono;
   private String direccion;
   private String especialidad;
-  private int reparacionesRealizadas;
+  private int reparaciones;
 
-  // Constructor
-  public Mecanicos(String IdMecanico, String nombre, String correo, int telefono, String direccion, String especialidad) {
-    this.IdMecanico = IdMecanico;
+  // Constructor único
+  public Mecanicos(String nombre, String codigo, String correo, int telefono, String direccion, String especialidad) {
     this.nombre = nombre;
+    this.codigo = codigo;
     this.correo = correo;
     this.telefono = telefono;
     this.direccion = direccion;
     this.especialidad = especialidad;
-    this.reparacionesRealizadas = 0;
+    this.reparaciones = 0;
   }
 
-
-
-  // Mostrar datos del mecánico
+  // Método para mostrar datos
   public void mostrarDatos() {
-    System.out.println("Mecánico: " + nombre);
-    System.out.println("ID: " + IdMecanico);
+    System.out.println("Nombre: " + nombre);
+    System.out.println("Código: " + codigo);
     System.out.println("Correo: " + correo);
-    System.out.println("Telefono: " + telefono);
-    System.out.println("Direccion: " + direccion);
+    System.out.println("Teléfono: " + telefono);
+    System.out.println("Dirección: " + direccion);
     System.out.println("Especialidad: " + especialidad);
-    System.out.println("Reparaciones realizadas: " + reparacionesRealizadas);
-    System.out.println("Estado: " + (esMecanicoActivo() ? "Activo" : "Inactivo"));
+    System.out.println("Reparaciones realizadas: " + reparaciones);
   }
 
-  // Contabilizar una nueva reparación hecha
   public void registrarReparacion() {
-    reparacionesRealizadas++;
+    reparaciones++;
   }
 
-  // Saber si es un mecánico activo
-  public boolean esMecanicoActivo() {
-    return reparacionesRealizadas >= 0;
-  }
-
-  // Getter
+  // ✅ Getters necesarios
   public String getNombre() {
     return nombre;
   }
+
+  public String getCodigo() {
+    return codigo;
+  }
+
+  public String getCorreo() {
+    return correo;
+  }
+
+  public int getTelefono() {
+    return telefono;
+  }
+
+  public String getDireccion() {
+    return direccion;
+  }
+
+  public String getEspecialidad() {
+    return especialidad;
+  }
+
+  public int getReparaciones() {
+    return reparaciones;
+  }
 }
+
