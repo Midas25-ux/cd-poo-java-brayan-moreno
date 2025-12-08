@@ -6,10 +6,12 @@
 - `buscarEmpleado(String nombre, double salarioMinimo)`
 
 ### Justificación
-Permite buscar empleados por diferentes criterios sin duplicar lógica.  
-En el dominio de recursos humanos es común buscar por identificación o por condiciones salariales.
 
----
+La sobrecarga permite buscar empleados por diferentes criterios sin duplicar lógica.  
+En el dominio de recursos humanos es común buscar por identificación o por condiciones salariales.  
+Esto hace el sistema más flexible y reutilizable.
+
+
 
 ## 2. Sobrescritura (Overriding)
 ### Métodos sobrescritos
@@ -22,34 +24,21 @@ En el dominio de recursos humanos es común buscar por identificación o por con
 | calcularSalario()  | return salarioBase        | return salarioBase + bono         | return salarioBase                  |
 | obtenerDescripcion() | "Empleado: nombre"      | "Empleado de Planta: nombre (años)" | "Empleado por Contrato: nombre (fecha)" |
 
----
+### Justificación
+Cada subclase redefine el comportamiento para adaptarse a su realidad:
+- **Planta:** recibe bonos por antigüedad.
+- **Contrato:** mantiene salario base y muestra fecha de fin de contrato.
 
-## 3. Polimorfismo Dinámico
-### Ejemplo
+### Ejemplo de código
 ```java
 for (Empleado e : empleados) {
     System.out.println(e.obtenerDescripcion());
     System.out.println("Salario: $" + e.calcularSalario());
+    System.out.println("Tipo real: " + e.getClass().getSimpleName());
+    System.out.println("---");
 }
 
-Explicación
-Aunque el array es de tipo Empleado, cada objeto ejecuta el método sobrescrito de su subclase real (EmpleadoPlanta o EmpleadoContrato). Esto demuestra dynamic binding: la decisión de qué método ejecutar se hace en tiempo de ejecución.
-
-4. Beneficios
-Reutilización de código con métodos comunes en la clase padre.
-
-Flexibilidad para extender el sistema con nuevos tipos de empleados.
-
-Polimorfismo dinámico que permite tratar objetos diferentes de forma uniforme.
-
-Sin polimorfismo, sería necesario escribir múltiples condicionales para cada tipo de empleado.
 
 
----
 
-✅ Con esto tienes tu entrega de la **Semana 05 completa**:  
-- README.md con explicación y ejemplo.  
-- POLIMORFISMO.md con sobrecarga, sobrescritura, polimorfismo dinámico y beneficios.  
-
-¿Quieres que te prepare también el **código de `SistemaRH.java` y `Main.java` listo para compilar**, con las sobrecargas y polimorfismo funcionando?
 
