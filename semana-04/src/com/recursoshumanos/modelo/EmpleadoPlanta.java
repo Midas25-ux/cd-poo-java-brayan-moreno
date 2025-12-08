@@ -1,3 +1,8 @@
+package com.recursoshumanos.modelo;
+
+import com.recursoshumanos.interfaces.Pagable;
+import com.recursoshumanos.interfaces.Bonificable;
+import com.recursoshumanos.interfaces.Reportable;
 public class EmpleadoPlanta extends Empleado implements Pagable, Reportable, Bonificable {
   private int antiguedad;
 

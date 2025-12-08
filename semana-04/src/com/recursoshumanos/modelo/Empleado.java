@@ -1,3 +1,5 @@
+package com.recursoshumanos.modelo;
+
 public abstract class Empleado {
   protected String nombre;
   protected String identificacion;

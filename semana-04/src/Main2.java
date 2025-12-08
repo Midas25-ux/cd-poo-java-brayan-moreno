@@ -1,4 +1,8 @@
 import java.time.LocalDate;
+import com.recursoshumanos.modelo.Empleado;
+import com.recursoshumanos.modelo.EmpleadoContrato;
+import com.recursoshumanos.modelo.EmpleadoPlanta;
+
 
 public class Main2 {
   public static void main(String[] args) {

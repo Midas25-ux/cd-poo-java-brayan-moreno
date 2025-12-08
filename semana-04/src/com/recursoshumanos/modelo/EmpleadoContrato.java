@@ -1,3 +1,5 @@
+package com.recursoshumanos.modelo;
+
 import java.time.LocalDate;
 
 public class EmpleadoContrato extends Empleado {
