@@ -1,9 +1,24 @@
-package com.recursoshumanos.modelo;
+package com.recursoshumanos.servicio;
+
+import com.recursoshumanos.modelo.Empleado;
+import com.recursoshumanos.excepciones.*;
 
 import java.util.ArrayList;
 
 public class SistemaRH {
-  private ArrayList<Empleado> empleados;
+  private ArrayList<Empleado> empleados = new ArrayList<>();
+  private int cupoMaximo = 5;
+
+  public void registrarEmpleado(Empleado e) throws EmpleadoInvalidoException, DisponibilidadException {
+    if (e == null) {
+      throw new EmpleadoInvalidoException("Empleado no puede ser null");
+    }
+    if (empleados.size() >= cupoMaximo) {
+      throw new DisponibilidadException("No hay cupo disponible en el sistema");
+    }
+    empleados.add(e);
+    System.out.println("✅ Empleado registrado: " + e.getNombre());
+  }
 
   // Constructor
   public SistemaRH() {
@@ -19,7 +34,7 @@ public class SistemaRH {
   // Método polimórfico: procesar nómina de un empleado
   public void procesarNomina(Empleado empleado) {
     double salario = empleado.calcularSalario(); // Polimorfismo dinámico
-    System.out.println("Procesando pago para: " + empleado.nombre);
+    System.out.println("Procesando pago para: " + empleado.getNombre());
     System.out.println("Salario: $" + salario);
   }
 
@@ -47,7 +62,7 @@ public class SistemaRH {
   // Ejemplo de sobrecarga: buscar empleados
   public Empleado buscarEmpleado(String id) {
     for (Empleado e : empleados) {
-      if (e.identificacion.equals(id)) {
+      if (e.getIdentificacion().equals(id)) {
         return e;
       }
     }
@@ -57,7 +72,7 @@ public class SistemaRH {
   public ArrayList<Empleado> buscarEmpleado(String nombre, double salarioMinimo) {
     ArrayList<Empleado> resultado = new ArrayList<>();
     for (Empleado e : empleados) {
-      if (e.nombre.equalsIgnoreCase(nombre) && e.calcularSalario() >= salarioMinimo) {
+      if (e.getNombre().equalsIgnoreCase(nombre) && e.calcularSalario() >= salarioMinimo) {
         resultado.add(e);
       }
     }
