@@ -1,4 +1,4 @@
-public class Empleado {
+public abstract class Empleado {
   protected String nombre;
   protected String identificacion;
   protected double salarioBase;
@@ -13,16 +13,14 @@ public class Empleado {
     return salarioBase;
   }
 
-  // ✅ Método base que faltaba
+  // metodo base que faltaba
   public String obtenerDescripcion() {
     return "Empleado: " + nombre + " (ID: " + identificacion + ")";
   }
 
-  // ✅ Método que faltaba
+  // metodo base para poliformismo
   public void mostrarInfo() {
-    System.out.println("Empleado: " + nombre);
-    System.out.println("ID: " + identificacion);
-    System.out.println("Salario base: $" + salarioBase);
+    System.out.println("Empleado: " + nombre + " | ID: " + identificacion);
   }
 
   public String getNombre() { return nombre; }
