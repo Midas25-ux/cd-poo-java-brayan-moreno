@@ -1,0 +1,13 @@
+package com.recursoshumanos.excepciones;
+
+/**
+ * Excepción lanzada cuando no hay cupo disponible.
+ */
+public class DisponibilidadException extends Exception {
+  public DisponibilidadException(String mensaje) {
+    super(mensaje);
+  }
+  public DisponibilidadException(String mensaje, Throwable causa) {
+    super(mensaje, causa);
+  }
+}
