@@ -7,6 +7,9 @@ public class EmpleadoContrato extends Empleado {
 
   public EmpleadoContrato(String nombre, String identificacion, double salarioBase,LocalDate fechaFinContrato) {
     super(nombre, identificacion, salarioBase);
+    if (fechaFinContrato == null || fechaFinContrato.isBefore(LocalDate.now())) {
+      throw new IllegalArgumentException("Fecha de contrato inválida");
+    }
     this.fechaFinContrato = fechaFinContrato;
   }
 

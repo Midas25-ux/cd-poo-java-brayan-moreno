@@ -6,6 +6,12 @@ public abstract class Empleado {
   protected double salarioBase;
 
   public Empleado(String nombre, String identificacion, double salarioBase) {
+    if (nombre == null || nombre.isBlank()) {
+      throw new IllegalArgumentException("Nombre inválido");
+    }
+    if (salarioBase <= 0) {
+      throw new IllegalArgumentException("Salario debe ser mayor a 0");
+    }
     this.nombre = nombre;
     this.identificacion = identificacion;
     this.salarioBase = salarioBase;
@@ -25,9 +31,15 @@ public abstract class Empleado {
     System.out.println("Empleado: " + nombre + " | ID: " + identificacion);
   }
 
-  public String getNombre() { return nombre; }
-  public String getIdentificacion() { return identificacion; }
-  public double getSalarioBase() { return salarioBase; }
+  public String getNombre() {
+    return nombre;
+  }
+
+  public String getIdentificacion() {
+    return identificacion;
+  }
+  public double getSalarioBase()
+  { return salarioBase; }
 }
 
 
