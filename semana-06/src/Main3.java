@@ -1,3 +1,11 @@
+package com.recursoshumanos;
+
+import com.recursoshumanos.modelo.Empleado;
+import com.recursoshumanos.modelo.EmpleadoPlanta;
+import com.recursoshumanos.modelo.EmpleadoContrato;
+import com.recursoshumanos.interfaces.Pagable;
+import com.recursoshumanos.interfaces.Reportable;
+
 import java.time.LocalDate;
 
 public class Main3 {
