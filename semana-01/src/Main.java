@@ -1,3 +1,5 @@
+import com.recursoshumanos.modelo.Mecanicos;
+import com.recursoshumanos.modelo.Servicio;
 
 public class Main {
     public static void main(String[] args) {

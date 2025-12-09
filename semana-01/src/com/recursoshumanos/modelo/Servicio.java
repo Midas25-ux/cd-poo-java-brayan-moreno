@@ -1,3 +1,5 @@
+package com.recursoshumanos.modelo;
+
 public class Servicio {
   private String tipo;
   private String nombre;

@@ -1,3 +1,5 @@
+package com.recursoshumanos.modelo;
+
 public class Mecanicos {
   private String nombre;
   private String codigo;
