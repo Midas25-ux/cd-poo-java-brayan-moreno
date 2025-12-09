@@ -2,15 +2,15 @@ package com.recursoshumanos.modelo;
 
 public class Servicio {
   private String tipo;
-  private String nombre;
+  private String Id_servicio;
   private double precio;
   private String descripcion;
   private int duracionHoras;
   private boolean disponible;
 
-  public Servicio(String tipo, String nombre, double precio, String descripcion, int duracionHoras, boolean disponible) {
+  public Servicio(String tipo, String Id_servicio, double precio, String descripcion, int duracionHoras, boolean disponible) {
     this.tipo = tipo;
-    this.nombre = nombre;
+    this.Id_servicio = Id_servicio;
     this.precio = precio;
     this.descripcion = descripcion;
     this.duracionHoras = duracionHoras;
@@ -19,7 +19,7 @@ public class Servicio {
 
   // Getters necesarios
   public String getNombre() {
-    return nombre;
+    return Id_servicio;
   }
 
   public double getPrecio() {
@@ -44,7 +44,7 @@ public class Servicio {
 
 
   public void mostrarInfo() {
-    System.out.println("Servicio: " + nombre + " (" + tipo + ")");
+    System.out.println("Servicio: " + Id_servicio + " (" + tipo + ")");
     System.out.println("Precio: $" + precio);
     System.out.println("Descripción: " + descripcion);
     System.out.println("Duración: " + duracionHoras + " hora(s)");
