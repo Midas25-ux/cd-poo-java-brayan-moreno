@@ -1,3 +1,8 @@
+package com.recursoshumanos;
+
+import com.recursoshumanos.servicio.Reparacion;
+
+
 import java.util.ArrayList;
 
 public class TallerMecanico {

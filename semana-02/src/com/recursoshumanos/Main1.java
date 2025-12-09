@@ -1,3 +1,10 @@
+package com.recursoshumanos;
+
+import com.recursoshumanos.modelo.Cliente;
+import com.recursoshumanos.modelo.Mecanicos;
+import com.recursoshumanos.modelo.Servicio;
+import com.recursoshumanos.servicio.Reparacion;
+
 public class Main1 {
   public static void main(String[] args) {
     System.out.println("=== SISTEMA DE GESTIÓN DE TALLER MECÁNICO ===\n");

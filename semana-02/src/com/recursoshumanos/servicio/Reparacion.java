@@ -1,3 +1,8 @@
+package com.recursoshumanos.servicio;
+
+import com.recursoshumanos.modelo.Cliente;
+import com.recursoshumanos.modelo.Mecanicos;
+import com.recursoshumanos.modelo.Servicio;
 import java.text.DecimalFormat;
 
 public class Reparacion {
